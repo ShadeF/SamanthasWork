@@ -146,7 +146,7 @@
  if (isset($_POST['register'])) {
  	extract($_POST);
  		$passwordfromuser = $pass;
- 		// $convertedpass = sha1($passwordfromuser);
+ 		$convertedpass = sha1($passwordfromuser);
 
  	$query = "INSERT INTO 6470users (username, password_hash, phone) VALUES ('$name', '$convertedpass', '$number')";
 
